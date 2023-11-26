@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header img {
+            border-radius: 50%;
+            max-width: 100px;
+            height: auto;
+        }
+
+        .profile-image {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .profile-image img {
+            border-radius: 50%;
+            max-width: 200px;
+            height: auto;
+            animation: waveAnimation 2s ease-in-out infinite;
+        }
+
+        @keyframes waveAnimation {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        nav {
+            background-color: #3498db;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .description {
+            padding: 20px;
+            line-height: 1.6;
+        }
+        button {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 20px;
+        }
+        footer {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .container {
+                margin: 20px auto;
+            }
+
+            header img {
+                max-width: 80px;
+            }
+
+            .profile-image img {
+                max-width: 150px;
+            }
+
+            .description {
+                padding: 10px;
+            }
+            nav li {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            .container {
+                max-width: 90%;
+            }
+        
+        }
+
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("changeBackgroundButton").addEventListener("click", function () {
+                changeBackgroundColor();
+            });
+
+            function changeBackgroundColor() {
+                const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+                document.body.style.backgroundColor = randomColor;
+            }
+        });
+    </script>
+    <title>Anas's Profile</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/projects">projects</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+        <header>
+            <h1>Anas's Profile</h1>
+            <div class="profile-image">
+                <img src="https://cdn.discordapp.com/attachments/1071907256431562783/1178248180580757504/457566_j4bqaeGu_1.png?ex=65757421&is=6562ff21&hm=19a5844e9c85c909a0a4e827ae889c3867f1402538bc064e4fd1b8097cff2852" alt="Profile Image">
+            </div>
+        </header>
+        <div class="description">
+            <p>I am Anas, a software engineering student at 1337. I am passionate about anything that involves coding, whether it's mobile development, data analysis, web development, and more.</p>
+        </div>
+        <button id="changeBackgroundButton">Change Background</button>
+        <footer>
+            <a href="https://medium.com/@Elhazin" target="_blank">Medium</a>
+            <a href="https://github.com/elhazin" target="_blank">GitHub</a>
+        </footer>
+    </div>
+</body>
+</html>

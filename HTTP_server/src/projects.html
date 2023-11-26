@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header img {
+            max-width: 100px;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .project-description {
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .project-description img {
+            max-width: 100px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+    <title>Projects Description</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Projects Description</h1>
+        </header>
+        
+        <div class="project-description">
+            <img src="https://camo.githubusercontent.com/08d0138e27320a2da12d68daa26dcbbe0e7deddd3eda536f405c0dab2beefb00/68747470733a2f2f692e696d6775722e636f6d2f3236596f4b6e382e706e67" alt="Minishell Icon">
+            <h2>Minishell Project</h2>
+            <p>Minishell is a project that involves creating a command line interface and executing commands, simulating the behavior of Bash.</p>
+            <a href="https://github.com/">GitHub Repository</a>
+        </div>
+        <div class="project-description">
+            <img src="https://camo.githubusercontent.com/aa44f529c0a5e0781e51c80a0daf5b2b48e70109180b341d4892511d45c9baec/68747470733a2f2f69312e61652f696d672f776562736572762f494f5f4d5f42472e706e67" alt="Webserver Icon">
+            <h2>Webserver Project</h2>
+            <p>Webserver is a project that involves creating an HTTP server using C++/C functions. It includes implementing the POST, GET, and DELETE methods.</p>
+            <a href="https://github.com/">GitHub Repository</a>
+        </div>
+
+
+        <footer>
+            <button id="changeBackgroundColorButton">Change Background Color</button>
+        </footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("changeBackgroundColorButton").addEventListener("click", function () {
+            changeBackgroundColor();
+        });
+        function changeBackgroundColor() {
+            const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.backgroundColor = randomColor;
+        }
+    });
+</script>
+    </div>
+</body>
+</html>
+
