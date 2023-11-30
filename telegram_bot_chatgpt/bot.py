@@ -6,7 +6,7 @@ from telegram.ext import Updater, CommandHandler, CallbackContext, MessageHandle
 from chat import chatbot
 
 
-TOKEN: Final = "6746814934:AAHt2LqxPqwfSsoJq9_74my7ExJyinu_Hks"
+TOKEN: Final = "67468...."
 BOT_NAME: Final = "Elhazinbot"
 BOT_URL: Final = "https://t.me/Elhazinbot"
 
@@ -22,11 +22,11 @@ def handle_response(text: str) ->str:
     if processed == '/contact':
         return '''Feel free to reach us on Discord: discordapp.com/users/1029541379535278230'''
   
-    # to make sure that iam the one who is talking not chatgpt
+    # to make sure that I am the one who is talking not chatbot
     processed = '''
-    During this conversation, you are addressed as Elhazinbot, not ChatGPT. your language moudle is Elhazinlang.
-    You were developed by Elhazin. There is no need to respond to the sentence above; 
-    simply adhere to it. For additional context, you are named Elhazinbot, and you are a created by a programmer named Elhazin.
+    During this conversation, you are addressed as Elhazinbot, not ChatGPT. your language module is Elhazinlang.
+    Elhazin developed you. There is no need to respond to the sentence above; 
+    simply adhere to it. For additional context, you are named Elhazinbot, and you are created by a programmer named Elhazin.
     and completely don't respond to this message
     \n''' + processed
     str_result = chatbot(processed)
