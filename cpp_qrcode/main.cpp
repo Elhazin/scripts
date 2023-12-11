@@ -37,7 +37,7 @@ int main() {
         curl_easy_setopt(curl, CURLOPT_URL, api_url.c_str());
         curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
         curl_easy_setopt(curl, CURLOPT_WRITEDATA, &out_file);
-        curl_easy_setopt(curl, CURLOPT_HTTPHEADER, NULL);  // Headers are set below
+        curl_easy_setopt(curl, CURLOPT_HTTPHEADER, NULL); 
         curl_slist* headers = NULL;
         headers = curl_slist_append(headers, ("X-Api-Key: " + token).c_str());
         headers = curl_slist_append(headers, "Accept: image/png");
