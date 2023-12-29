@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="test">
+        <button id="start" onclick="start()">Start generating</button>
+    </div>
+
+
+    <div id="hide" class="hide">
+        <div id="starting" class="starting">
+            <h1 class="text" ></h1>
+            <input type="number" id="number" placeholder="Enter a number" oninput="clearing()">
+            <button id="submit" onclick="next()">Submit</button>
+            </div>
+    </div>
+    <div id="hide2" class="hide2">
+            <textarea id="textarea" class="textarea" cols="30" rows="10" readonly></textarea>
+            <button id="copy" onclick="copy()">Copy</button>
+    </div>
+    <div class="cursor"></div>
+</body>
+<script src="main.js"></script>
+</html>

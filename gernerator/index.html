@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <title>?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section>
+	<h1>Random numbers generator</h1>
+	<h4>Generate any number of random values with or without repeats</h4>
+	<div class="group">
+		<label for="minimum">Minimum:</label>
+		<input type="number" step="1" id="minimum"/>
+	</div>
+	<div class="group">
+		<label for="maximum">Maximum:</label>
+		<input type="number" step="1" id="maximum"/>
+	</div>
+	<div class="group">
+		<label for="resultcount">How many results?</label>
+		<input type="number" min="1" step="1" id="resultcount" placeholder="1"/>
+	</div>
+	<div class="boxgroup">
+		<input type="checkbox" id="norepeat"/>
+		<label for="norepeat">No repeat results</label>
+	</div>
+	<div class="boxgroup">
+		<input type="checkbox" id="sort"/>
+		<label for="sort">Order results numerically</label>
+	</div>
+	<button onClick="crunch()">Generate</button>
+		<div id="result"></div>
+</section>    
+</body>
