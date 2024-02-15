@@ -2,7 +2,7 @@ from telegram.ext import Updater, CommandHandler, CallbackContext, MessageHandle
 import time
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 
-toke = "6858684509:AAG00nIEYnFsX2tK0To6YgDFN2NyqsoxL0c"
+toke = ""
 
 user = None
 
